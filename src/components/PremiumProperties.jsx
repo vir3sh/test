@@ -223,24 +223,6 @@ function PropertyCard({ property }) {
           </span>
         </span>
 
-        {/* Save */}
-        <button
-          type="button"
-          onClick={() => setSaved((s) => !s)}
-          aria-pressed={saved}
-          aria-label={
-            saved
-              ? `Remove ${property.name} from saved`
-              : `Save ${property.name}`
-          }
-          className="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-white/90 text-[#172d45] shadow-sm backdrop-blur transition hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0875d1]"
-        >
-          <Heart
-            size={18}
-            className={`transition ${saved ? "fill-rose-500 text-rose-500" : ""}`}
-          />
-        </button>
-
         {/* Photo arrows */}
         <button
           type="button"
