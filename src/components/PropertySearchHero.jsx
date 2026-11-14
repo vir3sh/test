@@ -12,6 +12,7 @@ import {
   Play,
   Search,
   BadgeCheck,
+  ShieldCheck,
   ArrowUpRight,
 } from "lucide-react";
 
@@ -25,7 +26,7 @@ const HERO_SLIDES = [
   {
     src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=2000&q=90",
     alt: "Luxury modern architectural residence",
-    eyebrow: "FIND YOUR PERFECT ADDRESS",
+    eyebrow: "RERA-verified · Neutral advice · Bulk buying rates",
     title: "A Better Way to",
     highlight: "Find Your Home.",
     description:
@@ -35,7 +36,7 @@ const HERO_SLIDES = [
   {
     src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=2000&q=90",
     alt: "Premium luxury living room",
-    eyebrow: "LUXURY THAT SPEAKS FOR ITSELF",
+    eyebrow: "RERA-verified · Neutral advice · Bulk buying rates",
     title: "Live Beyond",
     highlight: "Expectations.",
     description:
@@ -45,7 +46,7 @@ const HERO_SLIDES = [
   {
     src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=2000&q=90",
     alt: "Modern residential property",
-    eyebrow: "SMART PROPERTY INVESTMENTS",
+    eyebrow: "RERA-verified · Neutral advice · Bulk buying rates",
     title: "Invest Better.",
     highlight: "Live Smarter.",
     description:
@@ -55,7 +56,7 @@ const HERO_SLIDES = [
   {
     src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=2000&q=90",
     alt: "Contemporary residential architecture",
-    eyebrow: "YOUR DREAM HOME STARTS HERE",
+    eyebrow: "RERA-verified · Neutral advice · Bulk buying rates",
     title: "The Right Home.",
     highlight: "The Right Deal.",
     description:
@@ -287,7 +288,11 @@ export default function PropertySearchHero({ onSearch }) {
                 >
                   {/* Eyebrow */}
                   <div className="mb-3 flex items-center gap-2 sm:mb-5 sm:gap-3">
-                    <span className="h-[2px] w-6 shrink-0 bg-[#55b6ff] sm:w-8" />
+                    <ShieldCheck
+                      className="h-4 w-4 shrink-0 text-[#75c5ff] sm:h-5 sm:w-5"
+                      strokeWidth={2}
+                      aria-hidden="true"
+                    />
 
                     <span className="text-[9px] font-bold uppercase tracking-[1.8px] text-white/90 sm:text-xs sm:tracking-[3px]">
                       {HERO_SLIDES[index].eyebrow}
