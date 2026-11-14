@@ -15,6 +15,9 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 
+/* -------------------------------------------------------------------------- */
+/*  Data                                                                       */
+/* -------------------------------------------------------------------------- */
 
 const AUTOPLAY_MS = 5500;
 
@@ -74,7 +77,7 @@ const locations = [
 ];
 
 const configurations = [
-  "Any Configuration",
+  "Any BHK",
   "1 BHK",
   "2 BHK",
   "3 BHK",
@@ -128,6 +131,10 @@ const trustPoints = [
   "Better deals",
 ];
 
+/* -------------------------------------------------------------------------- */
+/*  Component                                                                  */
+/* -------------------------------------------------------------------------- */
+
 export default function PropertySearchHero({ onSearch }) {
   const reduceMotion = useReducedMotion();
 
@@ -167,6 +174,7 @@ export default function PropertySearchHero({ onSearch }) {
     });
   }, []);
 
+  /* ---- Entrance animations ---- */
   const container = {
     hidden: {},
     show: {
@@ -395,16 +403,16 @@ export default function PropertySearchHero({ onSearch }) {
         {/* HEADING + SUPPORT */}
         <motion.div
           variants={item}
-          className="grid items-end gap-5 py-6 sm:gap-8 md:py-10 lg:grid-cols-[1.25fr_1fr] lg:gap-16"
+          className="grid items-center gap-5 py-6 sm:gap-8 md:py-10 lg:grid-cols-[1.35fr_1fr] lg:gap-16"
         >
-          <h1 className="text-[30px] font-extrabold leading-[1.1] tracking-tight text-[#172d45] min-[400px]:text-[34px] sm:text-5xl lg:text-[64px] lg:leading-[1.05]">
+          <h1 className="text-[32px] font-extrabold leading-[1.08] tracking-tight text-[#172d45] min-[400px]:text-[36px] sm:text-5xl lg:text-[72px] lg:leading-[1.04]">
             Feel the Value
             <br />
             <span className="text-[#0875d1]">In Every Deal.</span>
           </h1>
 
           <div>
-            <p className="max-w-md text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">
+            <p className="max-w-md text-sm leading-6 text-slate-600 sm:text-[15px] sm:leading-7">
               Bulk-buying rates and straight numbers on 170+ verified listings
               across Mumbai. Find your next property at the right price.
             </p>
@@ -415,11 +423,11 @@ export default function PropertySearchHero({ onSearch }) {
                   key={stat.label}
                   className="flex flex-col px-3 first:pl-0 sm:px-6"
                 >
-                  <dt className="order-2 mt-0.5 text-[11px] leading-4 text-slate-500 sm:mt-1 sm:text-sm sm:leading-5">
+                  <dt className="order-2 mt-0.5 text-[11px] leading-4 text-slate-500 sm:mt-1 sm:text-[13px] sm:leading-5">
                     {stat.label}
                   </dt>
 
-                  <dd className="text-xl font-bold tabular-nums tracking-tight text-[#172d45] sm:text-3xl">
+                  <dd className="text-xl font-bold tabular-nums tracking-tight text-[#172d45] sm:text-2xl">
                     {stat.number}
                   </dd>
                 </div>

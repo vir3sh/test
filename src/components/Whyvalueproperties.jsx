@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ShieldCheck, Compass, Scale, PiggyBank } from "lucide-react";
 
-
 const unsplash = (id) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=900&q=80`;
 
@@ -48,7 +47,6 @@ const values = [
     },
   },
 ];
-
 
 function TextTile({ value, variants }) {
   const Icon = value.icon;
@@ -96,7 +94,6 @@ function TextTile({ value, variants }) {
   );
 }
 
-
 function ImageTile({ value, variants }) {
   const [failed, setFailed] = useState(false);
   const Icon = value.icon;
@@ -129,7 +126,6 @@ function ImageTile({ value, variants }) {
   );
 }
 
-
 export default function WhyValueProperties() {
   const reduceMotion = useReducedMotion();
 
@@ -160,7 +156,7 @@ export default function WhyValueProperties() {
       };
 
   return (
-    <section className="bg-[#f5f9fd] py-6 md:py-10">
+    <section className="bg-[#fff] py-6 md:py-10">
       <div className="mx-auto max-w-[1280px] px-4 md:px-8">
         {/* Heading */}
         <div className="mb-12 text-center">
