@@ -13,7 +13,6 @@ import {
   Ruler,
 } from "lucide-react";
 
-
 const phoneNumber = "919876543210";
 
 const properties = [
@@ -180,7 +179,6 @@ const statusDot = (status) =>
       ? "bg-amber-500"
       : "bg-[#0875d1]";
 
-
 function PropertyCard({ property }) {
   const gallery = useMemo(() => getGallery(property), [property]);
   const [slide, setSlide] = useState(0);
@@ -301,7 +299,7 @@ function PropertyCard({ property }) {
           <span className="truncate">
             {property.location}
             <span className="text-slate-300"> · </span>
-            {property.type}
+            {/* {property.type} */}
           </span>
         </p>
 
@@ -354,7 +352,6 @@ function PropertyCard({ property }) {
     </motion.article>
   );
 }
-
 
 export default function PremiumProperties() {
   const [activeLocation, setActiveLocation] = useState("All");
